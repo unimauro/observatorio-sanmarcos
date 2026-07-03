@@ -280,8 +280,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Grupo Intercorp (Super Food Holding); controlado por Carlos Rodriguez-Pastor Persivale. Opera Plaza Vea, Vivanda, Mass, Makro",
+   "fuente_dueno": "https://www.datosperu.org/empresa-supermercados-peruanos-sociedad-anonima-o-spsa-20100070970.php"
   },
   {
    "nombre": "CONSORCIO LETRAS",
@@ -312,8 +312,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Edenred SE (Francia, cotiza en Euronext Paris; ex-Accor Services). Presidente/CEO Bertrand Dumazy. Emite vales tipo Ticket Restaurant",
+   "fuente_dueno": "https://en.wikipedia.org/wiki/Edenred"
   },
   {
    "nombre": "CONSORCIO SAN CARLOS",
@@ -344,8 +344,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Grupo Optical Networks; fundador Eduardo Barriga. Division residencial (Wi-Net) vendida a Linzor Capital en 2024; Win Empresas sigue en el grupo. GG Eduardo Zagazeta",
+   "fuente_dueno": "https://www.infobae.com/peru/2024/08/22/venden-win-linzor-capital-comprara-la-empresa-peruana-pero-solo-una-parte-cambiara-de-dueno/"
   },
   {
    "nombre": "CONSORCIO EDUCACIÓN",
@@ -392,8 +392,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Diveimport S.A. (marca Divemotor); parte del Grupo Kaufmann (Chile), distribuidor de Mercedes-Benz, Jeep, Freightliner",
+   "fuente_dueno": "https://www.ey.com/es_pe/insights/revista-execution/entrevistas/entrevista-divemotor-peru"
   },
   {
    "nombre": "CONSORCIO CAROLINA S.A.C.",
@@ -424,8 +424,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Corporacion Vega (Tiendas Vega); familia Vega. Gerente general Antonio Michel Vega Paredes",
+   "fuente_dueno": "https://www.datosperu.org/empresa-corporacion-vega-sac-20502257987.php"
   },
   {
    "nombre": "CORPORACION ALIMENTARIA ALEXCAR S.A.C.",
@@ -440,8 +440,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Gerente general Carlos Alberto Azcarate Lucero (desde 2002)",
+   "fuente_dueno": "https://www.datosperu.org/empresa-corporacion-alimentaria-alexcar-sac-20423044765.php"
   },
   {
    "nombre": "GLOBAL SERVICIO INTEGRAL MEDICO SOCIEDAD ANONIMA",
@@ -572,8 +572,8 @@
    },
    "tipo_persona": "empresa",
    "tipo_proveedor_seace": "Persona Juridica",
-   "dueno": null,
-   "fuente_dueno": null
+   "dueno": "Entel Peru S.A., filial del grupo chileno Entel (Empresa Nacional de Telecomunicaciones S.A.)",
+   "fuente_dueno": "https://es.wikipedia.org/wiki/Entel_Chile"
   },
   {
    "nombre": "PICSA PERU S.A.C.",
