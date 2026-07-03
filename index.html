@@ -21,23 +21,27 @@
 <meta property="og:image" content="https://unimauro.github.io/observatorio-sanmarcos/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root{
   --granate:#5e1020; --granate2:#7a1428; --granate3:#a01e34; --oro:#c9a227;
-  --tinta:#1c1416; --bg:#f7f2f0; --card:#fff; --line:#e8dcd9; --muted:#6b5c58;
-  --shadow:0 6px 24px rgba(50,10,20,.08);
+  --tinta:#241a1c; --bg:#faf6f3; --card:#fff; --line:#ece1dd; --muted:#7a6a66;
+  --shadow:0 1px 2px rgba(50,10,20,.04), 0 8px 28px rgba(50,10,20,.07);
+  --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 :root[data-theme="dark"]{
-  --tinta:#f4e9e7; --bg:#160a0c; --card:#231316; --line:#3c2127; --muted:#c9aaa4;
-  --shadow:0 6px 24px rgba(0,0,0,.4);
+  --tinta:#f4e9e7; --bg:#16090b; --card:#22131600; --card:#241417; --line:#3c2127; --muted:#c9aaa4;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:var(--bg);color:var(--tinta);line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:var(--sans);
+  background:var(--bg);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--granate3)}
 :root[data-theme="dark"] a{color:var(--oro)}
-h1,h2,h3{font-family:"Georgia",serif;line-height:1.2;margin:0 0 .3em}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .3em;letter-spacing:-.01em;font-weight:600}
 .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
 
 /* barra de apoyo */
@@ -52,7 +56,7 @@ h1,h2,h3{font-family:"Georgia",serif;line-height:1.2;margin:0 0 .3em}
 header.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);
   backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 header.nav .wrap{display:flex;align-items:center;gap:8px;padding:11px 18px}
-.brand{font-family:Georgia,serif;font-weight:700;font-size:19px;color:var(--granate3);text-decoration:none;white-space:nowrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--granate3);text-decoration:none;white-space:nowrap}
 :root[data-theme="dark"] .brand{color:var(--oro)}
 .brand small{display:block;font-size:11px;color:var(--muted);font-weight:400;font-family:inherit}
 nav.links{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
@@ -63,7 +67,7 @@ nav.links a:hover,nav.links a.on{color:var(--granate3);background:color-mix(in s
 
 /* hero */
 .hero{background:linear-gradient(135deg,#3d0210,#5e1020 45%,#7a1428);color:#fff;padding:54px 0 44px}
-.hero h1{color:#fff;font-size:clamp(28px,5vw,44px)}
+.hero h1{color:#fff;font-size:clamp(30px,5vw,46px);font-weight:600}
 .hero p{max-width:720px;color:#f2d7dc;font-size:17px}
 .tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
   border-radius:30px;padding:4px 13px;font-size:12.5px;margin-bottom:16px;letter-spacing:.02em}
@@ -73,18 +77,22 @@ section{padding:48px 0;border-bottom:1px solid var(--line)}
 section h2{font-size:clamp(22px,3.4vw,30px);color:var(--granate3)}
 :root[data-theme="dark"] section h2{color:var(--oro)}
 .lead{color:var(--muted);max-width:760px;margin:.2em 0 1.4em}
-.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--oro);font-weight:700;margin-bottom:6px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;color:var(--oro);font-weight:700;margin-bottom:8px;display:inline-flex;align-items:center;gap:7px}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--oro);display:inline-block}
 
 /* kpis */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:14px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px;box-shadow:var(--shadow)}
-.kpi .v{font-family:Georgia,serif;font-size:27px;font-weight:700;color:var(--granate3)}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease}
+.kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--granate3),var(--oro))}
+.kpi:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(50,10,20,.05),0 14px 36px rgba(50,10,20,.1)}
+.kpi .v{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--granate3);letter-spacing:-.02em}
 :root[data-theme="dark"] .kpi .v{color:var(--oro)}
 .kpi .l{font-size:12.5px;color:var(--muted);margin-top:2px}
 .kpi .s{font-size:11.5px;color:var(--muted);margin-top:4px;opacity:.85}
 
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);transition:box-shadow .15s ease}
+.card:hover{box-shadow:0 2px 4px rgba(50,10,20,.05),0 14px 40px rgba(50,10,20,.1)}
 .card h3{font-size:16px}
 .chart-box{position:relative;height:300px}
 .chart-box.tall{height:360px}
@@ -249,6 +257,7 @@ footer{padding:34px 0;color:var(--muted);font-size:13px}
       <div class="card"><h3>Por genérica de gasto (S/ millones)</h3><div class="chart-box"><canvas id="cGen"></canvas></div></div>
       <div class="card"><h3>Por unidad ejecutora</h3><div class="chart-box"><canvas id="cUni"></canvas></div></div>
     </div>
+    <div class="card" style="margin-top:20px"><h3>Por programa presupuestal / actividad (S/ millones)</h3><div class="chart-box tall"><canvas id="cProg"></canvas></div><p class="note" id="progNote"></p></div>
     <div class="card" style="margin-top:20px"><h3>Detalle por función</h3><div class="scroll"><table id="tFun"><thead><tr><th>Función</th><th class="n">PIM (S/)</th><th class="n">Devengado (S/)</th><th class="n">Ejec.</th></tr></thead><tbody></tbody></table></div></div>
   </div>
   <p class="note" id="gastoNote"></p>

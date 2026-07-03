@@ -169,6 +169,12 @@ function renderGasto() {
   const gen = d.por_generica?.length ? d.por_generica : d.por_categoria;
   if (gen?.length) donut(cGen, gen);
   if (d.por_unidad?.length) donut(cUni, d.por_unidad);
+  if (d.por_programa?.length && typeof cProg !== 'undefined') {
+    const p = d.por_programa.slice(0, 12);
+    new Chart(cProg, { type: 'bar', data: { labels: p.map(x => x.nombre.length > 42 ? x.nombre.slice(0, 40) + '…' : x.nombre), datasets: [{ label: 'PIM S/ M', data: p.map(x => x.pim / 1e6), backgroundColor: p.map(x => /docencia|investigac/i.test(x.nombre) ? GRANATE : ORO) }] }, options: opts({ indexAxis: 'y', plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => 'S/ ' + c.raw.toFixed(1) + ' M' } } } }) });
+    const pn = document.getElementById('progNote');
+    if (pn) pn.innerHTML = `San Marcos no etiqueta su presupuesto por facultad en el SIAF, sino por <strong>programa/actividad</strong>. Lo lidera «Ejercicio de la docencia universitaria» (${fmtM(p[0].pim)}) e «Investigación científica y tecnológica».`;
+  }
   const tb = document.querySelector('#tFun tbody');
   if (tb && d.por_funcion?.length) {
     tb.innerHTML = d.por_funcion.map(x => `<tr><td>${(x.nombre || '—').replace(/^\d+[:.\-]?\s*/, '')}</td><td class="n">${fmtN(Math.round(x.pim))}</td><td class="n">${fmtN(Math.round(x.dev))}</td><td class="n">${x.pim ? Math.round(100 * x.dev / x.pim) + '%' : '—'}</td></tr>`).join('');
